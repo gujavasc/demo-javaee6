@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="./../../resources/template/template.xhtml">
+
+        <ui:define name="content">
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Id:" for="id" />
+                    <p:inputText id="id" value="#{clienteMB.cliente.id}" title="Id" readonly="true"/>
+                    <p:outputLabel value="Nome:" for="nome" />
+                    <p:inputText id="nome" value="#{clienteMB.cliente.nome}" title="Nome" />
+                    <p:outputLabel value="Telefone:" for="telefone" />
+                    <p:inputText id="telefone" value="#{clienteMB.cliente.telefone}" title="Telefone" />
+                    <p:outputLabel value="Email:" for="email" />
+                    <p:inputText id="email" value="#{clienteMB.cliente.email}" title="Email" />
+                    <p:outputLabel value="Senha:" for="senha" />
+                    <p:inputText id="senha" value="#{clienteMB.cliente.senha}" title="Senha" />
+                    <p:outputLabel value="Endereco:" for="endereco" />
+                    <p:inputText id="endereco" value="#{clienteMB.cliente.endereco}" title="Endereco" />
+                </p:panelGrid>
+            </h:form>
+
+            <p:commandButton value="Salvar" action="#{clienteMB.salvar}"/>
+
+        </ui:define>
+
+    </ui:composition>
+    
+</html>
